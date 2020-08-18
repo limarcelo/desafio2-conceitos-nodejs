@@ -33,7 +33,7 @@ app.post("/repositories", (request, response) => {
 
   const repository = { id: uuid(), 
     title,
-    url: 'https://github.com/rocketseat-education', 
+    url: 'https://github.com/Rocketseat/umbriel', 
     techs,
     likes: 0
   }
@@ -41,7 +41,7 @@ app.post("/repositories", (request, response) => {
   return response.json(repository);
 });
 
-app.put("/repositories/:id", validadeNoChangeFields, (request, response) => {
+app.put("/repositories/:id", (request, response) => {
   
   const { id } = request.params;
   const { title, url, techs } = request.body;
